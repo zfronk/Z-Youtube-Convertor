@@ -390,10 +390,11 @@ namespace YoutubeConvertorNamespace
                     Console.WriteLine("Please wait!");
                     Console.WriteLine();
 
-                    //progress bar audio
-                    
 
-                    Console.WriteLine();
+                    //progress bar audio
+
+
+
                     await youtube.Videos.Streams.DownloadAsync(audioStreamInfo, audioFilePath );
                     Console.WriteLine("Mp3 download complete!");
                     Console.WriteLine();
@@ -411,6 +412,7 @@ namespace YoutubeConvertorNamespace
 
                     //mux the two downloads
                     Console.WriteLine("Muxing video and audio...");
+                    Console.WriteLine();
                     await MuxVideoAndAudio(videoFilePath, audioFilePath, outputPath);
 
                     Console.WriteLine();
